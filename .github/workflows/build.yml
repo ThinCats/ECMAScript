@@ -1,6 +1,13 @@
 name: Build Godot with ECMAScript
 # TODO: Investigate making this on tag instead of push since builds take so long
-on: [push]
+on:
+  push:
+    branches:
+      - release
+  pull_request:
+    branches:
+      - release
+  workflow_dispatch:
 
 # Global Cache Settings
 env:
